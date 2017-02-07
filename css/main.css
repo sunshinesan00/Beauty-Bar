@@ -1,0 +1,455 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'nav-font';
+  src:  url('../fonts/PoiretOne-Regular.woff2') format('woff2'),
+        url('../fonts/PoiretOne-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'heading-font';
+  src:  url('../fonts/mexcellent.woff2') format('woff2'),
+        url('../fonts/mexcellent.woff') format('woff');
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 100%; }
+}
+
+/*variable declaration*/
+:root {
+	--font-pink: #af3691;
+	--font-purple: #551146;
+	--gradient-pink-dark: #f399c1;
+	--gradient-pink-light: #ffeff9;
+
+	--border-radius: 15px;
+}
+
+
+/*general*/
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+	width: 36%;
+	/*min-width: 450px;*/
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#index {
+	background: url(../img/main-bg.jpg) center center fixed no-repeat;
+	/*-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+
+	animation: animatedBackground 60s alternate infinite;
+}
+
+#menu {
+	background: url(../img/menu-bg.jpg) center center fixed no-repeat;
+	/*-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+
+	animation: animatedBackground 60s alternate infinite;
+}
+
+#events {
+	background: url(../img/events2-bg.jpg) center center fixed no-repeat;
+	/*-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+	/*-webkit-filter: blur(3px);
+	filter: blur(3px);*/
+	animation: animatedBackground 60s alternate infinite;
+
+}
+
+#contact {
+	background: url(../img/contact-bg.jpg) center center fixed no-repeat;
+	/*-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+
+	animation: animatedBackground 60s alternate infinite;
+}
+
+#about-box p{
+	line-height: 150%;
+}
+
+/*heading*/
+
+h1, h2, h3, label, .button {
+	font-family: 'heading-font', sans-serif;
+	color: var(--font-purple);
+	letter-spacing: 3px;
+}
+
+#events h1 {
+	color: white;
+}
+
+#events h2 {
+	color: white;
+}
+
+h3 {
+	color: var(--font-pink);
+	margin: 20px 0 5px;
+}
+
+#menu > section > div > section:nth-child(2) p {
+	margin: 5px 0;
+}
+
+h1 {
+	font-size: 60px;
+	margin: 10px 0 20px;
+}
+
+/*links*/
+
+a {
+	text-decoration: none;
+	color: var(--font-pink);
+}
+
+.button {
+	padding: 15px 20px;
+	border-color: white;
+	border-width: 4px;
+	border-style: solid;
+	background-color: var(--font-purple);
+	font-weight: bold;
+	color: white;
+	display: inline-block;
+}
+
+.button:hover {
+	background-color: var(--font-pink);
+	transition: background-color 1s;
+}
+
+nav li > a:hover::before {
+	content: url(../img/arrow.png);
+	position: absolute;
+	left: -10px;
+}
+
+/*lists*/
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+}
+
+/*form*/
+
+form > * {
+	display: block;
+	margin-bottom: 5%;
+}
+
+label {
+	margin-bottom: 2%;
+	font-weight: bold;
+	color: var(--font-pink);
+}
+
+input, textarea, select {
+	border-width: 2px;
+	border-style: solid;
+	border-color: var(--font-pink);
+
+	width: 100%;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 10px;
+
+}
+
+textarea {
+	height: 138px;
+	resize: none;
+}
+
+/*nav area*/
+
+
+
+.header-area {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
+.header-area > div:first-child {
+	display: flex;
+}
+
+.logo-box, .main-nav {
+	width: 50%;
+}
+
+.logo-box img {
+	width: 88%;
+}
+
+.main-nav {
+	position: relative;
+	font-family: 'nav-font', sans-serif;
+
+	background: #f399c1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #ffeff9, #f399c1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #ffeff9, #f399c1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #ffeff9, #f399c1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(bottom right, #ffeff9, #f399c1); /* Standard syntax */
+
+	-moz-border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+}
+.main-nav:before {
+    position: absolute;
+    z-index: -1;
+    top: 20px; left: 20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--font-purple));
+
+    -moz-border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+    content: '';
+
+
+}
+
+.main-nav > div /*bg-div*/
+{
+	background-image: url('../img/pattern-transparent.png');
+	background-position: 0 0;
+	background-repeat: repeat;
+
+	height: 100%;
+	width: 100%;
+	padding: 5% 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	-moz-border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+}
+
+.main-nav ul {
+	height: 100%;
+	width: 100%;
+	display: flex;
+
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.main-nav li {
+	display: block;
+	width: 100%;
+	padding: 5% 0 5% 20%;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--font-pink);
+}
+
+.main-nav li:hover {
+	background-color: white;
+	transition: background-color 1s;
+}
+
+.logo-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-media-top {
+	display: flex;
+
+	justify-content: flex-end;
+	margin-top: 3%;
+}
+
+#about-box {
+	position: relative;
+	
+	background: #f399c1; /* For browsers that do not support gradients */
+	background: -webkit-linear-gradient(left top, #ffeff9, #f399c1); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(bottom right, #ffeff9, #f399c1); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(bottom right, #ffeff9, #f399c1); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(bottom right, #ffeff9, #f399c1); /* Standard syntax */
+
+	-moz-border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+}
+
+#about-box > div, .event-box > div {
+	padding: 6%;
+	background-image: url('../img/pattern-transparent.png');
+	background-position: 0 0;
+	background-repeat: repeat;
+
+	-moz-border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+}
+
+.event-box > div {
+	padding: 2%;
+	background-image: url('../img/pattern-transparent-light.png');
+}
+
+#about-box:before {
+    position: absolute;
+    z-index: -1;
+    top: 20px; left: 20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--font-purple));
+    content: '';
+
+    -moz-border-radius: var(--border-radius);
+    -webkit-border-radius: var(--border-radius);
+    border-radius: var(--border-radius);
+}
+
+.event-box {
+	background: #222;
+	color: white;
+	margin-top: 5%;
+}
+
+/*sprites*/
+
+.sprite { 
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-position: 0 0;
+}
+
+li:first-of-type .sprite {
+	background: url(../img/facebook.png) no-repeat;
+}
+
+li:last-of-type .sprite {
+	background: url(../img/twitter.png) no-repeat;
+}
+
+li .sprite:hover {
+	background-position: 0 -35px;
+}
+
+/*decorative*/
+
+.disco {
+	position: absolute;
+	top: -35px;
+	left: -32px;
+}
+
+.logo-box img {
+	z-index: 1;
+}
+
+/*animation*/
+
+.animated.hovering:hover {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/*media queries*/
+
+/*when the nav contact starts to break*/
+
+@media only screen and (max-width: 1300px) { 
+	
+	.wrapper {
+		width: 70%
+	}
+
+	h1 {
+		font-size: 45px;
+	}
+
+	#about-box:before {
+	    top: 15px; left: 20px;
+	}
+
+	.main-nav:before {
+		top: 15px; left: 20px;
+	}
+}
+
+/*when nav starts to break again*/
+
+@media only screen and (max-width: 687px) { 
+	
+	.wrapper {
+		width: 90%
+	}
+
+	h1 {
+		font-size: 38px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h3, label {
+		font-size: 16px;
+	}
+
+	.main-nav li {
+		font-size: 30px;
+	}
+
+	#about-box:before {
+	    top: 10px; left: 10px;
+	}
+
+	.main-nav:before {
+		top: 10px; left: 10px;
+	}
+}

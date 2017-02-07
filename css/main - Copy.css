@@ -1,0 +1,158 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'nav-font';
+  src:  url('../fonts/PoiretOne-Regular.woff2') format('woff2'),
+        url('../fonts/PoiretOne-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'heading-font';
+  src:  url('../fonts/mexcellent.woff2') format('woff2'),
+        url('../fonts/mexcellent.woff') format('woff');
+}
+
+/*variable declaration*/
+:root {
+	--font-pink: #af3691;
+	--font-purple: #551146;
+}
+
+
+/*general*/
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+	width: 36%;
+	/*min-width: 450px;*/
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+#index {
+	background: url(../img/main-bg.jpg) center center fixed no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#about-box p{
+	line-height: 150%;
+}
+
+/*heading*/
+
+h1 {
+	font-family: 'heading-font', sans-serif;
+	font-size: 60px;
+	color: var(--font-purple);
+	margin: 10px 0 20px;
+}
+
+/*links*/
+
+a {
+	text-decoration: none;
+	color: var(--font-pink);
+}
+
+/*lists*/
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+
+}
+
+
+/*nav area*/
+
+
+
+.header-area {
+	margin-top: 30px;
+	margin-bottom: 70px;
+}
+
+.header-area > div:first-child {
+	display: flex;
+}
+
+.logo-box, .main-nav {
+	width: 50%;
+}
+
+.main-nav {
+	font-family: 'nav-font', sans-serif;
+	padding: 5% 0;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	background-image: url('../img/pattern-transparent.png');
+	background-position: 0 0;
+	background-repeat: repeat;
+}
+
+.main-nav > div /*bg-div*/
+{
+	
+}
+
+.main-nav ul {
+	height: 100%;
+	width: 100%;
+	display: flex;
+
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.main-nav li {
+	display: block;
+	width: 100%;
+	padding-left: 20%;
+	font-size: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--main-bg-color);
+}
+
+.main-nav li:hover {
+	background-color: white;
+}
+
+.logo-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-media-top {
+	display: block;
+}
+
+#about-box {
+	padding: 2%; /*why is it so big when its only 2%*/
+	background-color: pink;
+}
